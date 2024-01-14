@@ -2,6 +2,7 @@ package com.example.multifactorauthservice.code;
 
 import com.example.multifactorauthservice.exception.CodeGenerationException;
 import org.apache.commons.codec.binary.Base32;
+import org.springframework.stereotype.Component;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
@@ -9,6 +10,7 @@ import java.security.InvalidKeyException;
 import java.security.InvalidParameterException;
 import java.security.NoSuchAlgorithmException;
 
+@Component
 public class DefaultCodeGenerator implements CodeGenerator {
 
     private final HashingAlgorithm algorithm;

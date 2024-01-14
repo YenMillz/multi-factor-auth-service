@@ -2,7 +2,9 @@ package com.example.multifactorauthservice.code;
 
 import com.example.multifactorauthservice.exception.CodeGenerationException;
 import com.example.multifactorauthservice.time.TimeProvider;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DefaultCodeVerifier implements CodeVerifier {
 
     private final CodeGenerator codeGenerator;

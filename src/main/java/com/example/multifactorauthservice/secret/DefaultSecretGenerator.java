@@ -1,9 +1,11 @@
 package com.example.multifactorauthservice.secret;
 
 import org.apache.commons.codec.binary.Base32;
+import org.springframework.stereotype.Component;
 
 import java.security.SecureRandom;
 
+@Component
 public class DefaultSecretGenerator implements SecretGenerator {
 
     private final static Base32 encoder = new Base32();
