@@ -36,4 +36,9 @@ public class DefaultSecretGenerator implements SecretGenerator {
         return bytes;
     }
 
+    public static void main(String[] args) {
+        var secretGenerator = new DefaultSecretGenerator();
+        System.out.println(secretGenerator.generate());
+    }
+
 }
