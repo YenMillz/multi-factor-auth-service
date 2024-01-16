@@ -1,5 +1,6 @@
 package com.example.multifactorauthservice.ui;
 
+import com.example.multifactorauthservice.TOTPExample;
 import com.example.multifactorauthservice.code.CodeGenerator;
 import com.example.multifactorauthservice.exception.CodeGenerationException;
 import com.example.multifactorauthservice.mail.MailSender;
