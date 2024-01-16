@@ -5,6 +5,10 @@ import org.springframework.stereotype.Component;
 
 import java.time.Instant;
 
+
+// Nu se folosește nicăieri, brat
+
+// Update, iară voi cu Dependency Injection-ul vostru ... :(
 @Component
 public class SystemTimeProvider implements TimeProvider {
 

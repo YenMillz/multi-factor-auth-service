@@ -12,5 +12,4 @@ public interface CodeResource {
 
     @PostMapping("/isValid")
     boolean validateCode(@RequestBody String code);
-
 }
