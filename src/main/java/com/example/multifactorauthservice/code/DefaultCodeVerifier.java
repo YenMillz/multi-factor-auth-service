@@ -30,14 +30,12 @@ public class DefaultCodeVerifier implements CodeVerifier {
         // Get the current number of seconds since the epoch and
         // calculate the number of time periods passed.
         long currentBucket = Math.floorDiv(timeProvider.getTime(), timePeriod);
-
         // Calculate and compare the codes for all the "valid" time periods,
         // even if we get an early match, to avoid timing attacks
         boolean success = false;
         for (int i = -allowedTimePeriodDiscrepancy; i <= allowedTimePeriodDiscrepancy; i++) {
             success = checkCode(secret, currentBucket + i, code) || success;
         }
-
         return success;
     }
 
@@ -63,7 +61,6 @@ public class DefaultCodeVerifier implements CodeVerifier {
         if (aBytes.length != bBytes.length) {
             return false;
         }
-
         int result = 0;
         for (int i = 0; i < aBytes.length; i++) {
             result |= aBytes[i] ^ bBytes[i];

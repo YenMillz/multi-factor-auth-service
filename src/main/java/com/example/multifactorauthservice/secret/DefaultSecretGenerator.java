@@ -28,6 +28,10 @@ public class DefaultSecretGenerator implements SecretGenerator {
         return new String(encoder.encode(getRandomBytes()));
     }
 
+    /**
+     *
+     * @return Genereaza numere pseudo-random
+     */
     private byte[] getRandomBytes() {
         // 5 bits per char in base32
         byte[] bytes = new byte[(numCharacters * 5) / 8];
@@ -36,6 +40,7 @@ public class DefaultSecretGenerator implements SecretGenerator {
         return bytes;
     }
 
+    // Care nahui main aici ?
     public static void main(String[] args) {
         var secretGenerator = new DefaultSecretGenerator();
         System.out.println(secretGenerator.generate());
